@@ -1,4 +1,7 @@
 
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     background: #dbd7d6;
@@ -105,7 +108,8 @@ nav{
 }
 
 .about-col-2{
-    flex-basis: 65%;
+    flex-basis: 60%;
+    text-align: left;
 }
 
 .sub-title{
