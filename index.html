@@ -15,7 +15,7 @@
                         <h1><a href="#header">李嘉文</a></h1>
                     </div>
                     <div class="containertwo">
-                        <h1><a href="#About">About</a></h1>
+                        <h1>Welcome</h1>
                     </div>
                 </nav>
             </div>
@@ -33,7 +33,7 @@
             <p class="sub-name">Software Engineer, Creator</p>
         </div>
 <!--About Me-->
-        <div class="color-box-two"></div>
+        <div id ="aboutmebox">About</div>
         <div id="about">
             <div class="container">
                 <div class="row">
@@ -41,18 +41,55 @@
                         <img src="Img/me.jpg" alt="me">
                     </div>
                     <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <ul>
-                            <li>Born and raised in Brooklyn, NY.</li> 
-                            <li>Film photographer hobbyist.</li>
-                            <li>Cat lover.</li> 
-                            <li>Avid coffee drinker.</li>
-                            <li>Lego builder.</li>
-                            <li>With a big dream to become a future Software Engineer.</li>
-                        </ul>
+                        <p>Just a small bean in a big world.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('hobbies')">Hobbies</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="hobbies">
+                            <ul>
+                                <li><span>Film photographer</span></li>
+                                <li><span>Cat lover</span></li>
+                                <li><span>Avid coffee drinker</span></li>
+                                <li><span>Lego builder</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>JavaScript</span></li>
+                                <li><span>Visual Studio Code</span></li>
+                                <li><span>HTML</span></li>
+                                <li><span>CSS</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Ad Operations</span></li>
+                                <li><span>FinTech</span></li>
+                                <li><span>Retail</span></li>
+                                <li><span>Research</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
     </body>
 </html>
